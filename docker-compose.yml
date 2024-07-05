@@ -1,0 +1,23 @@
+services:
+  database:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345678
+      - MYSQL_DATABASE=darkmoon
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=12345678
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+  php-fpm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src/adminpanel:/application
+  server:
+    image: nginx:latest
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./src/frontend:/usr/share/nginx/html/application
+    ports:
+      - 8080:80

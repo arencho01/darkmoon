@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="css/style.css">
+   <title>Dark moon</title>
+</head>
+<body>
+   
+   <!---------- Всплывающие окна ---------->
+
+   <div class="popup">
+      <div class="popup__inner">
+         <form class="popup__form" method="post" action="/new_call_request.php">
+            <h5 class="popup__title">Заказать звонок</h5>
+            <p class="popup__descr">
+               Оставьте свой номер, мы свяжемся с вами в ближайшее время
+            </p>
+            <label class="popup__label" for="popupInp">Телефон</label>
+            <input class="popup__inp" type="tel" name="phone" id="popupInp" maxlength="15">
+            <span class="popup__note">
+               должен начинаться на +7
+            </span>
+            <button class="btn popup__btn-order" type="button">Заказать</button>
+         </form>
+         <button class="popup__close-btn" type="button"></button>
+      </div>
+   </div>
+
+   <div class="thanks-popup">
+      <div class="thanks-popup__inner">
+         <img class="thanks-popup__icon" src="images/form-check-icon.svg"  alt="check" width="75px" height="75px">
+         <p class="thanks-popup__descr">
+            Спасибо!
+            <br>Ваша заявка принята.
+            <br>В ближайшее время мы с вами свяжемся!
+         </p>
+         <button class="thanks-popup__btn" type="button">Ok</button>
+         <button class="thanks-popup__btn-close" type="button"></button>
+      </div>
+   </div>
+   
+   <div class="popup-request">
+      <div class="popup-request__inner">
+         <form class="popup-request__form" method="post" action="/new_call_request.php">
+            <h5 class="popup-request__title">Оставить заявку</h5>
+            <label class="popup-request__label" for="popupRequestInp">Телефон</label>
+            <input class="popup-request__inp" type="tel" name="phone" id="popupRequestInp" maxlength="15">
+            <span class="popup-request__note">
+               должен начинаться на +7
+            </span>
+            <button class="btn popup-request__btn-order" type="button">Отправить</button>
+         </form>
+         <button class="popup-request__close-btn" type="button"></button>
+      </div>
+   </div>
+
+   <div class="popup-services">
+      <div class="popup-services__inner">
+         <form class="popup-services__form" method="post" action="/new_call_request.php">
+            <h5 class="popup-services__title">Заказать звонок</h5>
+            <label class="popup-services__label" for="popupServicesInp">Телефон</label>
+            <input class="popup-services__inp" type="tel" name="phone" id="popupServicesInp" maxlength="15">
+            <span class="popup-services__note">
+               должен начинаться на +7
+            </span>
+            <button class="btn popup-services__btn-order" type="button">Отправить</button>
+         </form>
+         <button class="popup-services__close-btn" type="button"></button>
+      </div>
+   </div>
+
+   <!---------- ********** ---------->
+
+
+
+   <header class="header">
+      <div class="header__wrapper">
+         <div class="container">
+            <div class="header__inner">
+               <div class="burger-menu">
+                  <span class="burger-menu__line"></span>
+               </div>
+               <h3 class="logo">
+                  Темная луна
+               </h3>
+               <nav class="menu">
+                  <ul class="menu__list">
+                     <li class="menu__item">
+                        <a class="menu__link" href="#">
+                           Обо мне
+                        </a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu__link" href="#">
+                           Услуги
+                        </a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu__link" href="#">
+                           Отзывы
+                        </a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu__link" href="#">
+                           Контакты
+                        </a>
+                     </li>
+                  </ul>
+                  <button class="btn btn__popup" type="button">Заказать звонок</button>
+               </nav>
+            </div>
+         </div>
+      </div>
+
+      <div class="top">
+         <div class="top__wrapper">
+            <div class="container">
+               <div class="top__inner">
+                  <h1 class="title top__title">
+                     Добро пожаловать в волшебный магазин
+                     <br>"Тёмная Луна"
+                  </h1>
+                  <p class="descr top__descr">
+                     Здесь Вы можете приобрести товары, которые изменят Вашу судьбу, подарят защиту Вам и Вашим близким, помогут исполнить желание и наполнят Вас магической силой.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+    <main class="main"> 
+
+      <section class="big-picture">
+         <div class="big-picture__wrapper">
+            <div class="container">
+               <div class="big-picture__inner">
+                  <div class="big-picture__bg"></div>
+                  <button class="btn big-picture__btn" type="button">Оставить заявку</button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="about">
+         <div class="about__wrapper">
+            <div class="container">
+               <div class="about__inner">
+                  <h3 class="title">Обо мне</h3>
+                  <p class="descr about__descr">
+                     Приветствую Вас в своей волшебной лавке! Моё имя Майя. Я занимаюсь эзотерикой более 6 лет. Провожу различные ритуалы и обряды
+                     Занимаюсь раскладами на различных колодах Таро. Обучаю магии, а так же провожу обучение по Темным и Классическим колодам Таро
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="services">
+         <div class="services__wrapper">
+            <div class="container">
+               <div class="services__inner">
+                  <h3 class="title services__title">Товары и услуги</h3>
+                  <p class="descr services__descr">
+                     Некоторые из напрвлений моей работы
+                  </p>
+                  <ul class="services__list">
+                     <li class="services__item">
+                        <img class="services__item-img" src="images/services-img-1.jpg" alt="taro">
+                        <div class="services__item-content">
+                           <h4 class="services__item-title">
+                              Камни
+                           </h4>
+                           <p class="services__item-descr">
+                              Заговоренные камни, свечи и земля. На удачу, деньги, любовь, здоровье и многое другое
+                           </p>
+                           <button class="btn services__item-btn">Заказать</button>
+                        </div>
+                     </li>
+                     <li class="services__item">
+                        <img class="services__item-img" src="images/services-img-2.jpg" alt="astro">
+                        <div class="services__item-content">
+                           <h4 class="services__item-title">
+                              Обучение
+                           </h4>
+                           <p class="services__item-descr">
+                              Обучение, расклады, обряды и ритуалы
+                           </p>
+                           <button class="btn services__item-btn">Заказать</button>
+                        </div>
+                     </li>
+                     <li class="services__item">
+                        <img class="services__item-img" src="images/services-img-3.jpg" alt="clean">
+                        <div class="services__item-content">
+                           <h4 class="services__item-title">
+                              Браслеты
+                           </h4>
+                           <p class="services__item-descr">
+                              Браслеты из натуральных камней. Заговоренные индивидуально для Вас!
+                           </p>
+                           <button class="btn services__item-btn">Заказать</button>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="send-contacts">
+         <div class="send-contacts__wrapper">
+            <div class="container">
+               <div class="send-contacts__inner">
+                  <h3 class="title send-contacts__title">Оставьте контакты и мы вам перезвоним</h3>
+
+                  <form method="post" class="send-contacts__form" action="/new_call_request.php">
+                     <div class="send-contacts__box">
+                        <input class="inp" type="text" name="name" placeholder="Имя">
+                        <input class="inp" type="tel" name="phone" placeholder="Телефон*">
+                        <input class="inp" type="text" name="message" maxlength="200" placeholder="Коментарий">
+                     </div>
+                     <button class="btn send-contacts__btn">Отправить</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="reviews">
+         <div class="reviews__wrapper">
+            <div class="container">
+               <div class="reviews__inner">
+                  <h3 class="title reviews__title">Отзывы клиентов</h3>
+
+                  <div class="reviews__slider">
+                     <div class="swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="reviews__card">
+                                 <h3 class="title reviews__card-title">
+                                    Качественные услуги
+                                 </h3>
+                                 <article class="reviews__card-text">
+                                    Благодарю за проделанную большую работу над моей проблемой! К кому только не обращалась. Только деньги брали, а толку ноль. Майя единственная кто мне действительно помогла! Ещё раз Благодарю &#128139;
+                                 </article>
+                                 <div class="reviews__card-box">
+                                    <div class="reviews__card-photo">
+                                       <img class="reviews__card-img" src="images/reviewer-1.jpg" alt="reviewer">
+                                    </div>
+                                    <div class="reviews__card-info">
+                                       <p class="reviews__card-name">Маргарита</p>
+                                       <ul class="reviews__card-rating">
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="reviews__card">
+                                 <h3 class="title reviews__card-title">
+                                    Долго искали, нашли здесь!
+                                 </h3>
+                                 <article class="reviews__card-text">
+                                    Долго искал мастера в подобной сфере. Оказался в очень тяжёлой жизненной ситуации. Как же повезло было найти именно Вас! Оказали не только магическую помощь, но и психологическую! Вы мастер своего дела!
+                                 </article>
+                                 <div class="reviews__card-box">
+                                    <div class="reviews__card-photo">
+                                       <img class="reviews__card-img" src="images/reviewer-2.jpg" alt="reviewer">
+                                    </div>
+                                    <div class="reviews__card-info">
+                                       <p class="reviews__card-name">Владислав</p>
+                                       <ul class="reviews__card-rating">
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="reviews__card">
+                                 <h3 class="title reviews__card-title">
+                                    Лучший сервис, который мы видели
+                                 </h3>
+                                 <article class="reviews__card-text">
+                                    Обучалась у Майи и картам и магии. Что могу сказать? Жизнь поменялась конкретно! Причём только в лучшую сторону. Из грязи сразу в князи&#128515; Очень грамотно и достоверно передаёт информацию! Даже подумать не могла на сколько интересен мир магии и Таро. Вообщем всем советую! Не пожалеете&#128293;
+                                 </article>
+                                 <div class="reviews__card-box">
+                                    <div class="reviews__card-photo">
+                                       <img class="reviews__card-img" src="images/reviewer-3.jpg" alt="reviewer">
+                                    </div>
+                                    <div class="reviews__card-info">
+                                       <p class="reviews__card-name">Наталья</p>
+                                       <ul class="reviews__card-rating">
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="reviews__card">
+                                 <h3 class="title reviews__card-title">
+                                    Огромое спасибо
+                                 </h3>
+                                 <article class="reviews__card-text">
+                                    Спасибо вам огромное, Майя, не только за вашу работу, но и за неоценимую психологическую поддержку, которую вы оказываете даже в ваше нерабочее время!
+                                 </article>
+                                 <div class="reviews__card-box">
+                                    <div class="reviews__card-photo">
+                                       <img class="reviews__card-img" src="images/reviewer-4.jpg" alt="reviewer">
+                                    </div>
+                                    <div class="reviews__card-info">
+                                       <p class="reviews__card-name">Максим</p>
+                                       <ul class="reviews__card-rating">
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                          <li class="reviews__card-star">
+                                             <svg fill="#BB6BFD" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                                                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                                                   s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                                                   l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                                                   c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                                                   l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z">
+                                                </path>
+                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                             </svg>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                     
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer class="footer">
+         <div class="footer__wrapper">
+            <div class="container">
+               <div class="footer__inner">
+                  <div class="footer__info">
+                     <h3 class="title footer__title">
+                        Контакты
+                     </h3>
+                     <div class="footer__box">
+                        <a class="footer__tel" href="tel:89508437617">8 (950) 843-76-17</a>
+                        <a class="footer__email" href="mailto:maja.korol777@gmail.com">maja.korol777@gmail.com</a>
+                        <div class="social-media">
+                           <h4 class="social-media__title">Мы в соц. сетях:</h4>
+                           <ul class="social-media__list">
+                              <li class="social-media__item">
+                                 <a class="social-media__link" href="#">
+                                    <img class="social-media__icon" src="images/telegram-icon.png" alt="telegram-link">
+                                 </a>
+                              </li>
+                              <li class="social-media__item">
+                                 <a class="social-media__link" href="https://wa.me/89508437617?text=Здравствуйте, пишу вам с сайта 'Тёмная луна'">
+                                    <img class="social-media__icon" src="images/whatsapp-icon.png" alt="whatsapp-link">
+                                 </a>
+                              </li>
+                              <li class="social-media__item">
+                                 <a class="social-media__link" href="#">
+                                    <img class="social-media__icon" src="images/vk-icon.png" alt="vk-link">
+                                 </a>
+                              </li>
+                              <li class="social-media__item">
+                                 <a class="social-media__link" href="viber://chat?number=%2B79508437617">
+                                    <img class="social-media__icon" src="images/viber-icon.png" alt="viber-link">
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <figure class="footer__figure">
+                     <img class="footer__img" src="images/footer-img.jpg" alt="coffee">
+                  </figure>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+   </main> 
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/script.js"></script>
+</body>
+</html>
